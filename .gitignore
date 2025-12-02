@@ -1,3 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+.venv/
+venv/
+
+# Env & secrets
 .env
-venv
 sigen_token.json
+
+# Kubernetes secrets (never commit configured secrets!)
+k8s/secret-sig-data-configured.yaml
+k8s/*-configured.yaml
+
+# Cloudflare tunnel credentials
+k8s/ingress/cloudflare-tunnel.yaml
+k8s/ingress/simple-cloudflare-tunnel.yaml
+
+# ConfigMap with exact coordinates
+k8s/configmap-sig-data.yaml
+
+# Non-template dashboards with station ID
+grafana/dashboards/sigen-complete-dashboard.json
+grafana/dashboards/sigen-solar-with-weather.json
+
+# Logs
+*.log
+sigen_cron.log
+
+# macOS
+.DS_Store
